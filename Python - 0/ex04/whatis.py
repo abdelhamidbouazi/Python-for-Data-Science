@@ -1,6 +1,7 @@
 import sys
 
 def whatis(x: int) -> int:
+    """check if even or odd"""
     if x % 2 == 0:
         print("I'm Even.")
     if x % 2 != 0:
