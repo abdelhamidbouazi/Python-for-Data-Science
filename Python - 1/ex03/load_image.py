@@ -12,12 +12,16 @@ def checkPathNdFormat(path: str) -> bool:
         if file_extension in ['.jpg', '.jpeg'] : return True
     return False
 
-def ft_load(path: str) -> np.array:
+def ft_load(path: str, style: str) -> np.array:
     try:
         assert checkPathNdFormat(path), "File does not exist or unsupported file format!"
         assert isinstance(path, str), "Path must be a string !"
         im = Image.open(path)
+        
+        # applying the style condition
         image_array = im.convert('RGB')
+        if style :
+            image_array = im.convert(style)
         image_rgb = np.array(image_array)
         print(f"The shape of image is: {image_rgb.shape}")
         return image_rgb
