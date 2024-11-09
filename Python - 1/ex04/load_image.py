@@ -4,6 +4,14 @@ import os
 
 
 def checkPathNdFormat(path: str) -> bool:
+    """Check Path And Format
+    this is a functions to check the given path and format if its a valid file
+    Args:
+        path (str): path to file
+
+    Returns:
+        bool: false in case of error
+    """
     file_extension = os.path.splitext(path)[1].lower()
     if os.path.isfile(path):
         if file_extension in ['.jpg', '.jpeg']:
@@ -12,6 +20,14 @@ def checkPathNdFormat(path: str) -> bool:
 
 
 def ft_load(path: str, style: str) -> np.array:
+    """ft_load
+    The main function to load an image, it works with numpy array
+    Args:
+        path (str): path to the image
+
+    Returns:
+        np.array: returns the image as a numpy array 
+    """
     try:
         assert checkPathNdFormat(path), "File issue!"
         assert isinstance(path, str), "Path must be a string !"

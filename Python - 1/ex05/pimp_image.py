@@ -25,6 +25,11 @@ import numpy as np
 #     return
 
 def display_original(array: str):
+    """display original image
+    this function display the original image
+    Args:
+        array (str): the image array
+    """
     plt.figure()
     plt.imshow(array)
     plt.axis('off')

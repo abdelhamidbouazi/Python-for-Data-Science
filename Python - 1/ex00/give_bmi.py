@@ -1,5 +1,14 @@
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
+    """Give_bmi
+    Calculate the bmi
+    Args:
+        height (list[int  |  float]): heigth
+        weight (list[int  |  float]): weigth
+
+    Returns:
+        list[int | float]: bmis
+    """
     assert isinstance(height, list), "height must be a list"
     assert isinstance(weight, list), "weigth must be a list"
     assert all(isinstance(h, (int, float))
@@ -14,6 +23,15 @@ def give_bmi(height: list[int | float],
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """Apply_limit
+    A function to check if list o bmis is bellow limit
+    Args:
+        bmi (list[int  |  float]): list of bmis
+        limit (int): the limit as an integer
+
+    Returns:
+        list[bool]: function return list of booleans based on the checker
+    """
     assert isinstance(bmi, list), "bmi must be a list"
     assert isinstance(limit, int), "limit must be an int"
     assert all(isinstance(h, (int, float))
