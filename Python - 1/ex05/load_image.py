@@ -11,7 +11,7 @@ def checkPathNdFormat(path: str) -> bool:
     return False
 
 
-def ft_load(path: str, style: str) -> np.array:
+def ft_load(path: str) -> np.array:
     try:
         assert checkPathNdFormat(path), "File issue!"
         assert isinstance(path, str), "Path must be a string !"
@@ -19,10 +19,11 @@ def ft_load(path: str, style: str) -> np.array:
 
         image_array = im.convert('RGB')
         # applying the style condition
-        if style:
-            image_array = im.convert(style)
+        # if style:
+        #     image_array = im.convert(style)
         image_rgb = np.array(image_array)
-        # print(f"The shape of image is: {image_rgb.shape}")
+        print(f"The shape of image is: {image_rgb.shape}")
+        print(f"{image_rgb}")
         return image_rgb
     except AssertionError as e:
         print(f"AssertionError: {e}")

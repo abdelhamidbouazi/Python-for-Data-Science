@@ -4,10 +4,11 @@ import numpy as np
 def checkLenght(list: list):
     """function ot check if the list given has same size in all elements"""
     firstElementSize = len(list[0])
-    for l in list:
-        if len(l) is not firstElementSize:
+    for le in list:
+        if len(le) is not firstElementSize:
             return False
     return True
+
 
 def slice_me(family: list, start: int, end: int) -> list:
     """
@@ -18,11 +19,13 @@ def slice_me(family: list, start: int, end: int) -> list:
     assert isinstance(start, int), "start is not int"
     assert isinstance(end, int), "end is not int"
     checkLenght(family)
-    
+
     familyArray = np.array(family)
     familyShape = familyArray.shape
     newArray = familyArray[start:end]
-    return f"My shape is : {familyShape}\nMy new shape is : {newArray.shape}\n{newArray.tolist()}"
+    result = f"My shape is : {familyShape}\n"
+    result += f"My new shape is : {newArray.shape}\n{newArray.tolist()}"
+    return result
 
 
 def main():
@@ -32,9 +35,9 @@ def main():
     """
     try:
         family = [[1.80, 78.4],
-        [2.15, 102.7],
-        [2.10, 98.5],
-        [1.88, 75.2]]
+                  [2.15, 102.7],
+                  [2.10, 98.5],
+                  [1.88, 75.2]]
         print(slice_me(family, 0, 2))
         print(slice_me(family, 1, -2))
     except AssertionError as e:
