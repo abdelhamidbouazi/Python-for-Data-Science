@@ -4,26 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# def ft_show(array: str):
-#     # img = ft_load(path, 'L')
-#     # img = img[200:600, 400:800]
-#     # shape_new = f"{img.shape[0], img.shape[1], 1} or {img.shape}"
-#     # print(f"The shape of image is: {shape_new}")
-#     # print(img)
-#     # img = ft_transpose_L(img)
-#     # print(f"New shape after Transpose: {img.shape}")
-#     # print(img)
-#     # plt.imshow(img, cmap="gray")
-#     plt.imshow(array)
-#     plt.axis('off')
-#     plt.show()
-#     return
-# def ft_show(array: str):
-#     plt.imshow(array)
-#     plt.axis('off')
-#     plt.show()
-#     return
-
 def display_original(array: str):
     """display original image
     this function display the original image
@@ -57,7 +37,6 @@ def ft_invert(array):
 def ft_red(array):
     """Ft_red
     Display the red colors in the image
-
     Args:
         array (nparray): the image array of type numpy
     """
@@ -77,7 +56,6 @@ def ft_red(array):
 def ft_green(array):
     """Ft_green
     Display the green colors in the image
-
     Args:
         array (nparray): the image array of type numpy
     """
@@ -96,7 +74,6 @@ def ft_green(array):
 def ft_blue(array):
     """Ft_blue
     Display the blue colors in the image
-
     Args:
         array (nparray): the image array of type numpy
     """
@@ -115,7 +92,6 @@ def ft_blue(array):
 def ft_grey(array):
     """Ft_grey
     Display the image in a greyscale mode
-
     Args:
         array (nparray): the image array of type numpy
     """
@@ -137,7 +113,7 @@ def ft_grey(array):
 
 def main():
     try:
-        array = ft_load("landscape.jpeg")
+        array = ft_load("/goinfre/abouazi/P-01/landscape.jpeg")
         assert array is not None, "please provide a valid image"
         ft_invert(array)
         ft_red(array)

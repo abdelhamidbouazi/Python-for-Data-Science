@@ -42,7 +42,7 @@ def ft_load(path: str) -> np.array:
 
 
 def main():
-    image = "landscape.jpg"
+    image = "/goinfre/abouazi/P-01/landscape.jeg"
     print(ft_load(image))
 
 

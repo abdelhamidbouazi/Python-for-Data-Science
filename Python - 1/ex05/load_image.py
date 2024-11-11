@@ -24,9 +24,8 @@ def ft_load(path: str) -> np.array:
     The main function to load an image, it works with numpy array
     Args:
         path (str): path to the image
-
     Returns:
-        np.array: returns the image as a numpy array 
+        np.array: returns the image as a numpy array
     """
     try:
         assert checkPathNdFormat(path), "File issue!"

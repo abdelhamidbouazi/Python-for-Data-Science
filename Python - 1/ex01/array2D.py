@@ -30,14 +30,11 @@ def slice_me(family: list, start: int, end: int) -> list:
 
 def main():
     """
-    returns the elements that have length greater or equal
-    to the length given by user
+    returns the elements sliced array
     """
     try:
-        family = [[1.80, 78.4],
-                  [2.15, 102.7],
-                  [2.10, 98.5],
-                  [1.88, 75.2]]
+        family = [[1.80, 78.4], [2.15, 102.7], [2.10, 98.5],
+                  [1.88, "fffzzzzzz"]]
         print(slice_me(family, 0, 2))
         print(slice_me(family, 1, -2))
     except AssertionError as e:

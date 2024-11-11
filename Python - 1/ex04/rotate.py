@@ -1,5 +1,6 @@
 # %%
 from load_image import ft_load
+from load_image import checkPathNdFormat
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -40,8 +41,7 @@ def rotate(path: str):
     Args:
         path (str): path to the image
     """
-    assert ft_load(path, 'RGB'), "Error!"
-
+    assert checkPathNdFormat(path), "File issue!"
     img = ft_load(path, 'L')
     img = img[200:600, 400:800]
     shape_new = f"{img.shape[0], img.shape[1], 1} or {img.shape}"
@@ -55,7 +55,7 @@ def rotate(path: str):
 
 def main():
     try:
-        rotate('animal.jpeg')
+        rotate('/goinfre/abouazi/P-01/animal.jpeg')
         return
     except AssertionError as e:
         print({e})

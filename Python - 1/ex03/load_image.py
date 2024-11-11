@@ -8,7 +8,6 @@ def checkPathNdFormat(path: str) -> bool:
     this is a functions to check the given path and format if its a valid file
     Args:
         path (str): path to file
-
     Returns:
         bool: false in case of error
     """
@@ -24,7 +23,6 @@ def ft_load(path: str, style: str) -> np.array:
     The main function to load an image, it works with numpy array
     Args:
         path (str): path to the image
-
     Returns:
         np.array: returns the image as a numpy array
     """
