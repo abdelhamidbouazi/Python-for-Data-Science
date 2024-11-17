@@ -34,11 +34,13 @@ def projection_life():
         fig, ax = plt.subplots()
         x = data['yearData_income']
         y = data['yearData_lifeExp']
-        np.corrcoef(x, y)
         plt.scatter(x, y)
+        plt.xscale('log')
+        plt.xticks([300, 1000, 10000], ["300", "1K", "10K"])
         ax.set_ylabel('Life expectancy')
         ax.set_xlabel('Gross domestic product')
         ax.set_title('1900')
+        
         plt.show()
     except (FileNotFoundError, pd.errors.EmptyDataError) as e:
         print(f"Error: {e}")

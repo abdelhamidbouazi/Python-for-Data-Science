@@ -14,9 +14,9 @@ def clean_pop(population):
     return population
 
 
-def million_formatter(x, pos):
-    """Formatter function to display values in millions"""
-    return f'{int(x)}M'
+# def million_formatter(x, pos):
+#     """Formatter function to display values in millions"""
+#     return f'{int(x)}M'
 
 
 def getData(data: pd.DataFrame, country: str):
@@ -59,8 +59,8 @@ def aff_pop():
         ax.set_ylabel('Population')
         ax.set_title('Population Projections')
         plt.xticks(x_ticks)
-        ax.set_yticks([20, 40, 60])
-        ax.yaxis.set_major_formatter(FuncFormatter(million_formatter))
+        ax.set_yticks([20, 40, 60], ["20M", "40M", "60M"])
+        # ax.yaxis.set_major_formatter(FuncFormatter(million_formatter))
         plt.show()
     except (FileNotFoundError, pd.errors.EmptyDataError) as e:
         print(f"Error: {e}")
