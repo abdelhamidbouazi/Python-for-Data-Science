@@ -5,6 +5,9 @@ from load_csv import load
 
 
 def aff_life():
+    """
+    projection of the life expectancy in Morooco
+    """
     data = load('life_expectancy_years.csv')
     if data is None:
         print("Loading Data Failed!")

@@ -14,11 +14,6 @@ def clean_pop(population):
     return population
 
 
-# def million_formatter(x, pos):
-#     """Formatter function to display values in millions"""
-#     return f'{int(x)}M'
-
-
 def getData(data: pd.DataFrame, country: str):
     """returns the data of the given country
     Args:
@@ -39,6 +34,10 @@ def getData(data: pd.DataFrame, country: str):
 
 
 def aff_pop():
+    """
+    main function to display the diffrence 
+    between population in morcco and france
+    """
     data = load('/goinfre/abouazi/Python-for-Data-Science/population_total.csv')
     if data is None:
         print("Loading Data Failed!")

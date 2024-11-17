@@ -27,6 +27,11 @@ def extractData():
 
 
 def projection_life():
+    """
+    function to display the projection life (life expectancy/income per person)
+    Returns:
+        None: returns None if something went wrong
+    """
     data = extractData()
     if data is None:
         return
