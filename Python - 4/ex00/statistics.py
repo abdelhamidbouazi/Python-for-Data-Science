@@ -53,11 +53,12 @@ def cal_quartile(args):
     if len(args) == 1:
         return args[0]
     median, median_index = cal_median(args)
-    lower_half = sorted(args)[0:median_index + 1]
-    upper_half = sorted(args)[median_index:]
+    lower_half = sorted(args)[0:median_index]
+    upper_half = sorted(args)[median_index + 1:]
+    print(upper_half)
     q1 = cal_median(lower_half)
     q3 = cal_median(upper_half)
-    return list((lower_half[q1[1]], upper_half[q3[1]]))
+    return list((q1[0], q3[0]))
 
 
 def cal_var(args):
